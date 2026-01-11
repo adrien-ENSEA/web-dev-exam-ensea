@@ -35,10 +35,7 @@ const loadRecipe = async (recipeId) => {
 		// 1. Appeler l'API pour récupérer la recette par son ID
 		//const recipe = await renderSingleRecipe(recipe)
 		//TODO: appeler renderSingleRecipe(recipe)
-		console.log(renderSingleRecipe(recipe))
 		const recipeDetail = document.getElementById("recipe-detail")
-
-		recipeDetail.innerHTML = renderSingleRecipe(recipe)
 
 		// 2. Afficher la recette dans la grid
 		//renderRecipeCard(recipe)
