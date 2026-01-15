@@ -1,66 +1,115 @@
 [
-	{
-		"id": 1,
-		"name": "Spaghetti Carbonara",
-		"ingredients": ["pâtes", "œufs", "lardons", "parmesan"],
-		"instructions": "Cuire les pâtes. Mélanger les œufs...",
-		"prepTime": 20,
-		"image": "https://images.pexels.com/photos/1437267/pexels-photo-1437267.jpeg?auto=compress&cs=tinysrgb&w=1000"
-	},
-	{
-		"id": 2,
-		"name": "Salade César",
-		"ingredients": ["laitue", "poulet", "croûtons", "parmesan"],
-		"instructions": "Laver la laitue. Griller le poulet...",
-		"prepTime": 15,
-		"image": "https://images.pexels.com/photos/1213710/pexels-photo-1213710.jpeg?auto=compress&cs=tinysrgb&w=1000"
-	},
-	{
-		"id": 3,
-		"name": "Ratatouille Provençale",
-		"ingredients": ["aubergines", "courgettes", "poivrons", "tomates", "oignon"],
-		"instructions": "Couper tous les légumes en dés. Faire revenir l'oignon et l'ail. Ajouter les légumes et laisser mijoter.",
-		"prepTime": 45,
-		"image": "https://images.pexels.com/photos/5190684/pexels-photo-5190684.jpeg?auto=compress&cs=tinysrgb&w=1000"
-	},
-	{
-		"id": 4,
-		"name": "Quiche Lorraine",
-		"ingredients": ["pâte brisée", "lardons", "œufs", "crème fraîche", "gruyère"],
-		"instructions": "Préchauffer le four. Faire revenir les lardons. Mélanger œufs et crème. Verser sur la pâte et cuire.",
-		"prepTime": 40,
-		"image": "https://images.unsplash.com/photo-1456014673271-90b7fddf2eea?q=80&w=1000&auto=format&fit=crop"
-	},
-	{
-		"id": 5,
-		"name": "Couscous Royal",
-		"ingredients": ["semoule", "agneau", "poulet", "merguez", "carottes", "courgettes"],
-		"instructions": "Faire revenir les viandes. Cuire les légumes dans le bouillon. Préparer la semoule à part.",
-		"prepTime": 90,
-		"image": "https://images.unsplash.com/photo-1582576163090-09d3b6f8a969?q=80&w=1000&auto=format&fit=crop"
-	},
-	{
-		"id": 6,
-		"name": "Crêpes Suzette",
-		"ingredients": ["farine", "œufs", "lait", "beurre", "oranges", "Grand Marnier"],
-		"instructions": "Préparer les crêpes. Faire une sauce avec le jus d'orange et le sucre. Flamber au Grand Marnier.",
-		"prepTime": 30,
-		"image": "https://images.pexels.com/photos/221143/pexels-photo-221143.jpeg?auto=compress&cs=tinysrgb&w=1000"
-	},
-	{
-		"id": 7,
-		"name": "Pad Thaï",
-		"ingredients": ["nouilles de riz", "crevettes", "œufs", "pousses de soja", "cacahuètes"],
-		"instructions": "Sauter les crevettes. Ajouter les nouilles et la sauce. Finir avec les cacahuètes et le citron.",
-		"prepTime": 25,
-		"image": "https://plus.unsplash.com/premium_photo-1664472637341-3ec829d1f4df?q=80&w=1000&auto=format&fit=crop"
-	},
-	{
-		"id": 8,
-		"name": "Tiramisu",
-		"ingredients": ["mascarpone", "œufs", "sucre", "biscuits à la cuillère", "café", "cacao"],
-		"instructions": "Mélanger mascarpone et œufs. Tremper les biscuits dans le café. Alterner les couches et saupoudrer de cacao.",
-		"prepTime": 30,
-		"image": "https://plus.unsplash.com/premium_photo-1695028378225-97fbe39df62a?q=80&w=1000&auto=format&fit=crop"
-	}
+  {
+    "id": 1,
+    "name": "Spaghetti Carbonara",
+    "ingredients": [
+      "pâtes",
+      "œufs",
+      "lardons",
+      "parmesan"
+    ],
+    "instructions": "Cuire les pâtes. Mélanger les œufs...",
+    "prepTime": 20,
+    "image": "https://images.pexels.com/photos/1437267/pexels-photo-1437267.jpeg?auto=compress&cs=tinysrgb&w=1000"
+  },
+  {
+    "id": 2,
+    "name": "Salade César",
+    "ingredients": [
+      "laitue",
+      "poulet",
+      "croûtons",
+      "parmesan"
+    ],
+    "instructions": "Laver la laitue. Griller le poulet...",
+    "prepTime": 15,
+    "image": "https://images.pexels.com/photos/1213710/pexels-photo-1213710.jpeg?auto=compress&cs=tinysrgb&w=1000"
+  },
+  {
+    "id": 3,
+    "name": "Ratatouille Provençale",
+    "ingredients": [
+      "aubergines",
+      "courgettes",
+      "poivrons",
+      "tomates",
+      "oignon"
+    ],
+    "instructions": "Couper tous les légumes en dés. Faire revenir l'oignon et l'ail. Ajouter les légumes et laisser mijoter.",
+    "prepTime": 45,
+    "image": "https://images.pexels.com/photos/5190684/pexels-photo-5190684.jpeg?auto=compress&cs=tinysrgb&w=1000"
+  },
+  {
+    "id": 4,
+    "name": "Quiche Lorraine",
+    "ingredients": [
+      "pâte brisée",
+      "lardons",
+      "œufs",
+      "crème fraîche",
+      "gruyère"
+    ],
+    "instructions": "Préchauffer le four. Faire revenir les lardons. Mélanger œufs et crème. Verser sur la pâte et cuire.",
+    "prepTime": 40,
+    "image": "https://images.unsplash.com/photo-1456014673271-90b7fddf2eea?q=80&w=1000&auto=format&fit=crop"
+  },
+  {
+    "id": 5,
+    "name": "Couscous Royal",
+    "ingredients": [
+      "semoule",
+      "agneau",
+      "poulet",
+      "merguez",
+      "carottes",
+      "courgettes"
+    ],
+    "instructions": "Faire revenir les viandes. Cuire les légumes dans le bouillon. Préparer la semoule à part.",
+    "prepTime": 90,
+    "image": "https://images.unsplash.com/photo-1582576163090-09d3b6f8a969?q=80&w=1000&auto=format&fit=crop"
+  },
+  {
+    "id": 6,
+    "name": "Crêpes Suzette",
+    "ingredients": [
+      "farine",
+      "œufs",
+      "lait",
+      "beurre",
+      "oranges",
+      "Grand Marnier"
+    ],
+    "instructions": "Préparer les crêpes. Faire une sauce avec le jus d'orange et le sucre. Flamber au Grand Marnier.",
+    "prepTime": 30,
+    "image": "https://images.pexels.com/photos/221143/pexels-photo-221143.jpeg?auto=compress&cs=tinysrgb&w=1000"
+  },
+  {
+    "id": 7,
+    "name": "Pad Thaï",
+    "ingredients": [
+      "nouilles de riz",
+      "crevettes",
+      "œufs",
+      "pousses de soja",
+      "cacahuètes"
+    ],
+    "instructions": "Sauter les crevettes. Ajouter les nouilles et la sauce. Finir avec les cacahuètes et le citron.",
+    "prepTime": 25,
+    "image": "https://plus.unsplash.com/premium_photo-1664472637341-3ec829d1f4df?q=80&w=1000&auto=format&fit=crop"
+  },
+  {
+    "id": 8,
+    "name": "Tiramisu",
+    "ingredients": [
+      "mascarpone",
+      "œufs",
+      "sucre",
+      "biscuits à la cuillère",
+      "café",
+      "cacao"
+    ],
+    "instructions": "Mélanger mascarpone et œufs. Tremper les biscuits dans le café. Alterner les couches et saupoudrer de cacao.",
+    "prepTime": 30,
+    "image": "https://plus.unsplash.com/premium_photo-1695028378225-97fbe39df62a?q=80&w=1000&auto=format&fit=crop"
+  }
 ]

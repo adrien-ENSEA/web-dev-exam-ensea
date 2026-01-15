@@ -112,3 +112,23 @@ export const deletOneRecipe = async (recipeId) => {
 		throw error
 	}
 }
+
+export const updateRecipe = async (recipeId, recipeData) => {
+	try {
+		const options = {
+			method: "PUT",
+			headers: { "Content-Type": "application/json" },
+			body: JSON.stringify(recipeData),
+		}
+		const response = await fetch(`${API_BASE_URL}/${recipeId}`, options)
+
+		if (!response.ok) {
+			throw new Error(`Erreur HTTP: ${response.status}`)
+		}
+
+		return await response.json()
+	} catch (error) {
+		console.error("Erreur lors de la mise à jour de la recette:", error)
+		throw error
+	}
+}

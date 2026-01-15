@@ -97,11 +97,12 @@ export const handleAddRecipe = async (event) => {
 		const name = document.getElementById("recipeName").value
 		const ingredients = document
 			.getElementById("recipeIngredients")
-			.value.split(",")
+			.value.split("\n")
 			.map((i) => i.trim())
+			.filter((i) => i !== "")
 		const instructions = document.getElementById("recipeInstructions").value
 		const prepTime = parseInt(document.getElementById("recipePrepTime").value)
-		const image = document.getElementById("recipeImageUrl").value
+		const image = document.getElementById("imageUrl").value
 
 		const newRecipe = {
 			name,
