@@ -30,7 +30,15 @@ export const getRecipes = (req, res) => {
 
 export const getRecipeById = (req, res) => {
 	try {
-		// Votre code ici
+		const recipes = readRecipes(recipesPath)
+		const id = parseInt(req.params.id)
+		const recipe = recipes.find((r) => r.id === id)
+
+		if (recipe) {
+			res.json(recipe)
+		} else {
+			res.status(404).json({ error: "Recette non trouvée" })
+		}
 	} catch (error) {
 		res.status(500).json({ error: error.message })
 	}
@@ -51,7 +59,13 @@ export const getRecipeById = (req, res) => {
 
 export const createRecipe = (req, res) => {
 	try {
-		// Votre code ici
+		const recipes = readRecipes(recipesPath)
+		const newRecipe = { id: Date.now(), ...req.body }
+
+		recipes.push(newRecipe)
+		writeRecipes(recipes, recipesPath)
+
+		res.status(201).json(newRecipe)
 	} catch (error) {
 		res.status(500).json({ error: error.message })
 	}
@@ -73,7 +87,20 @@ export const createRecipe = (req, res) => {
 
 export const updateRecipe = (req, res) => {
 	try {
-		// Votre code ici
+		const recipes = readRecipes(recipesPath)
+		const id = parseInt(req.params.id)
+		const index = recipes.findIndex((r) => r.id === id)
+
+		if (index === -1) {
+			return res.status(404).json({ error: "Recette non trouvée" })
+		}
+
+		// Mise à jour en fusionnant les données, on s'assure de garder l'ID original
+		recipes[index] = { ...recipes[index], ...req.body, id: id }
+
+		writeRecipes(recipes, recipesPath)
+
+		res.json(recipes[index])
 	} catch (error) {
 		res.status(500).json({ error: error.message })
 	}
@@ -94,7 +121,19 @@ export const updateRecipe = (req, res) => {
 
 export const deleteRecipe = (req, res) => {
 	try {
-		// Votre code ici
+		const recipes = readRecipes(recipesPath)
+		const id = parseInt(req.params.id)
+		const index = recipes.findIndex((r) => r.id === id)
+
+		if (index === -1) {
+			return res.status(404).json({ error: "Recette non trouvée" })
+		}
+
+		// On crée un nouveau tableau sans la recette à supprimer
+		const updatedRecipes = recipes.filter((r) => r.id !== id)
+		writeRecipes(updatedRecipes, recipesPath)
+
+		res.json({ message: "Recette supprimée avec succès" })
 	} catch (error) {
 		res.status(500).json({ error: error.message })
 	}
@@ -114,7 +153,18 @@ export const deleteRecipe = (req, res) => {
 
 export const searchRecipes = (req, res) => {
 	try {
-		// Votre code ici (BONUS)
+		const recipes = readRecipes(recipesPath)
+		const searchTerm = req.query.search
+
+		if (!searchTerm) {
+			return res.json(recipes)
+		}
+
+		const filteredRecipes = recipes.filter((recipe) =>
+			recipe.name.toLowerCase().includes(searchTerm.toLowerCase())
+		)
+
+		res.json(filteredRecipes)
 	} catch (error) {
 		res.status(500).json({ error: error.message })
 	}
