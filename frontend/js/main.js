@@ -1,7 +1,7 @@
 // ============================================
 // IMPORTS - Modules nécessaires
 // ============================================
-import { getAllRecipes, createRecipe } from "./api.js"
+import { getAllRecipes, createRecipe, searchRecipes } from "./api.js"
 import { renderRecipeCard, clearRecipesList } from "./ui.js"
 
 // ============================================
@@ -81,6 +81,26 @@ const setupEventListeners = () => {
 
 	if (addRecipeForm) {
 		addRecipeForm.addEventListener("submit", handleAddRecipe)
+	}
+
+	// Event listener pour la barre de recherche
+	const searchInput = document.getElementById("searchInput")
+	if (searchInput) {
+		searchInput.addEventListener("input", handleSearch)
+	}
+}
+
+// ============================================
+// RECHERCHER DES RECETTES
+// ============================================
+
+export const handleSearch = async (event) => {
+	const searchTerm = event.target.value
+	try {
+		const recipes = await searchRecipes(searchTerm)
+		displayRecipes(recipes)
+	} catch (error) {
+		console.error("Erreur lors de la recherche:", error)
 	}
 }
 

@@ -47,6 +47,24 @@ export const getAllRecipes = async () => {
 	}
 }
 
+/**
+ * Recherche des recettes par nom
+ * @param {string} searchTerm - Le terme de recherche
+ * @returns {Promise<Array>} - Tableau de recettes filtrées
+ */
+export const searchRecipes = async (searchTerm) => {
+	try {
+		const response = await fetch(`${API_BASE_URL}/search?search=${encodeURIComponent(searchTerm)}`)
+		if (!response.ok) {
+			throw new Error(`Erreur HTTP: ${response.status}`)
+		}
+		return await response.json()
+	} catch (error) {
+		console.error("Erreur lors de la recherche des recettes:", error)
+		throw error
+	}
+}
+
 // ============================================
 // CREATE A NEW RECIPE
 // ============================================
