@@ -390,3 +390,6 @@ Vous avez toutes les connaissances nécessaires pour réussir cet examen. Faites
 ## Affichage des recettes
 
 ![Home Page](./dynamic-home.png)
+
+---
+**Dusserre Adrien 3D**
